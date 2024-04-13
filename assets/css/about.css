@@ -1,0 +1,167 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.about-wrapper {
+  height: 100vh;
+}
+
+.about-left {
+  background-color: #b77a9f;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.about-left-container > div {
+  background-color: #f49cbb;
+  padding: 4rem 4rem 2.5rem 5rem;
+  text-align: center;
+}
+
+.about-left-container {
+  box-shadow: 0px 0px 18px -1px rgb(0, 0, 0, 0.39);
+}
+
+.about-img img {
+  display: block;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+  transition: all 0.5s ease-in-out;
+}
+
+.shadow {
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  cursor: pointer;
+}
+
+.shadow ::after {
+  content: none;
+  position: absulute;
+  background: rgb(0, 0, 0, 0.4);
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -20px;
+  height: 7px;
+  width: 50px;
+  filter: blur(3px);
+  -webkit-filter: blur(3px);
+  opacity: 0;
+  transition: all 0.6s ease;
+}
+
+.shadow :hover .about-img {
+  transform: translateX(-10px);
+}
+
+.shadow :hover ::after {
+  opacity: 1;
+}
+
+.about-left-container h2 {
+  font-size: 2rem;
+  margin: 2.2rem 0 0.6rem 0;
+  line-height: 1.2;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #edffed;
+}
+
+.about-left-container h3 {
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 5px;
+  margin-top: 1.3rem;
+}
+
+.about-right {
+  background-color: #fff;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5rem;
+  text-align: center;
+}
+
+.about-right h1 {
+  font-size: 7rem;
+  text-transform: uppercase;
+}
+
+.about-right span {
+  color: #dd2d4a;
+}
+
+.about-right h2 {
+  font-weight: 600;
+}
+
+.about-btns {
+  display: flex;
+  margin: 2rem 0;
+}
+
+.btn {
+  border: none;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  border: 2px solid #000;
+  border-radius: 20px;
+  padding: 0.55rem 0;
+  width: 130px;
+  font-weight: 600;
+  background: transparent;
+  margin: 0 0.5rem;
+  cursor: pointer;
+}
+
+.btn.btn-pink {
+  background: #dd2d4a;
+  color: #fff;
+  border-color: #dd2d4a;
+  transition: all 0.5s ease-in-out;
+  padding: 10px;
+}
+
+.btn.btn-pink:hover {
+  background: transparent;
+  border-color: #dd2d4a;
+  color: #000;
+}
+
+.about-par p {
+  font-weight: 300;
+  padding: 0.5rem;
+  opacity: 0.8;
+  font-size: 20px;
+}
+
+@media screen and (min-width: 992px) {
+  .about-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-left {
+    position: relative;
+  }
+
+  .about-left-container {
+    position: absolute;
+  }
+}
